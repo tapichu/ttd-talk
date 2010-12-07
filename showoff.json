@@ -1,0 +1,8 @@
+{
+    "name": "TDD",
+    "sections": [
+        { "section": "unit" },
+        { "section": "integration" },
+        { "section": "ci" }
+    ]
+}
