@@ -1,9 +1,20 @@
-!SLIDE 
-# My Presentation #
+!SLIDE subsection transition=scrollUp
+# Continuous Integration #
 
-!SLIDE bullets incremental
-# Bullet Points #
+!SLIDE bullets incremental transition=scrollUp
+# Integración continua #
 
-* first point
-* second point
-* third point
+* Automatizar la ejecución de pruebas:
+* De integración
+* De estrés
+* Automatizar el despliegue de la aplicación
+
+!SLIDE bullets incremental transition=scrollUp
+# Hudson #
+
+* Tarea: proyecto principal
+* Tarea: para cada fork
+* Notificaciones por correo
+* Resultados de las pruebas
+* Etc.
+
