@@ -19,7 +19,7 @@
 * Pruebas de rendimiento
 * Etc.
 
-!SLIDE execute small transition=scrollUp
+!SLIDE execute smaller transition=scrollUp
 # Ejemplo #
 
     @@@ java
@@ -32,7 +32,8 @@
 
             Map<String, Object> params = new HashMap<String, Object>();
             params.put("nombre", mesorregion.getNombre());
-            List<Mesorregion> mesorregiones = queryNamed("mesorregion.inactive.findByName", params);
+            List<Mesorregion> mesorregiones =
+                queryNamed("mesorregion.inactive.findByName", params);
             if (mesorregiones != null && !mesorregiones.isEmpty()) {
                 mesorregion.setId(mesorregiones.get(0).getId());
                 mesorregion.setFechaModificacion(null);
@@ -72,6 +73,7 @@
         assertNull(mesorregion.getFechaModificacion());
 
         assertEquals(4, mesorregionDao.findAll().size());
+        // Evitar 'false positives'!!!
         entityManager.flush();
     }
 

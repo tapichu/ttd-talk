@@ -12,9 +12,10 @@
 !SLIDE bullets incremental transition=scrollUp
 # Hudson #
 
-* Tarea: proyecto principal
-* Tarea: para cada fork
-* Notificaciones por correo
+* Una tarea para el proyecto principal
+* Una tarea para cada fork
+* Polling a GitHub (ejecución automática)
+* Notificaciones por correo en caso de error
 * Resultados de las pruebas
-* Etc.
+* Artefactos compilados (JARs, WARs, etc.)
 

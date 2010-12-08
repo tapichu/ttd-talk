@@ -69,7 +69,8 @@
                 will(returnValue(mesorregion));
         }});
 
-        Mesorregion result = mesorregionDao.update(mesorregion);
+        Mesorregion result =
+                mesorregionDao.update(mesorregion);
         assertNotNull(result);
         assertNotNull(result.getFechaModificacion());
     }
@@ -88,7 +89,31 @@
         }
     }
 
-!SLIDE execute small transition=scrollUp
+!SLIDE execute smaller transition=scrollUp
+# Excepciones de dependencias #
+
+    @@@ java
+    @Test
+    public void addMesorregionException() {
+        final Mesorregion mesorregion = new Mesorregion();
+
+        context.checking(new Expectations() {{
+            oneOf (mesorregionDao).create(mesorregion);
+                will(throwException(
+                    new DataAccessResourceFailureException("Error")));
+        }});
+
+        try {
+            carreterasService.addMesorregion(mesorregion);
+            fail("Debería haber lanzado una excepción");
+        } catch (ServiceException e) {
+            assertEquals(
+                CarreterasServiceErrors.MESORREGION_CREATE,
+                e.getMessage());
+        }
+    }
+
+!SLIDE execute smaller transition=scrollUp
 # Lógica "interna" #
 
     @@@ java
