@@ -1,6 +1,14 @@
 !SLIDE 
 # TDD: Test-driven development #
 
+!SLIDE bullets incremental transition=scrollUp
+# Objetivos #
+
+* Mejorar la calidad / robustez
+* Reducir el número de bugs
+* Reducir la fase de pruebas de aceptación
+* Tener confianza a la hora de hacer cambios o darle mantenimiento a la aplicación
+
 !SLIDE subsection transition=scrollUp
 # Unit tests #
 
