@@ -10,7 +10,7 @@
 * Automatizar el despliegue de la aplicación
 
 !SLIDE bullets incremental transition=scrollUp
-# Hudson #
+# Jenkins #
 
 * Una tarea para el proyecto principal
 * Una tarea para cada fork
